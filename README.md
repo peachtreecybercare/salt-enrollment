@@ -21,5 +21,9 @@
     * Search powershell in start bar
     * Click `Run as Administrator`
     * `cd ~\Downloads`
-
+    * master: `salt`
+    * minion: same as hostname
+      * run `hostname` from powershell
+    * Install
+3. Accept salt minion key on salt server
 
