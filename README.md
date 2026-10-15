@@ -2,16 +2,18 @@
 
 ## Install tailscale vpn
 
-1. Download windows client from <https://login.tailscale.com/admin/machines>
-2. Click Add device
-3. Navigate to <https://tailscale.com/download/windows>
-4. Click `Download Tailscale for Windows` to download
-5. Run download
-6. Sign in to your network via credentials (Github -> 'ptcdevs')
-7. Enable unattended access
-    * Right-click Tailscale icon in task
-    * Select `Preferences` -> `Run unattended`
-8. Disable key on <https://console.tailscale.com/machines>
+1. Download windows client from <https://login.tailscale.com/admin/machines> (`Sign in with GitHub`)
+2. Navigate to <https://tailscale.com/download/windows>
+3. Click `Download Tailscale for Windows` to download
+4. Run download
+5. Sign in to your network via credentials (Github -> 'ptcdevs')
+  - `ptcdevs.org.github` -> `Connect`
+6. Enable unattended access
+  - Right-click Tailscale icon in task
+  - Select `Preferences` -> `Run unattended`
+7. On <https://console.tailscale.com/machines>
+  - click 3-dots next to machine name
+  - `Disable key expiry`
 
 ## Install saltstack minion
 
@@ -22,9 +24,11 @@
     * Search powershell in start bar
     * Click `Run as Administrator`
     * `cd ~\Downloads`
+    * `./Salt-Minion-3006.29-Py3-AMD64.msi` (your file name may be different.  list files with `ls`)
     * master: `salt`
     * minion: same as hostname
       * run `hostname` from powershell
+    * checkbox: `Remove configuration and cache: On uninstall`
     * Install
 3. Accept salt minion key on salt server
 
